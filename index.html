@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>CSS Tranform Scroll</title>
+</head>
+<body>
+    <section class="bg">
+        <h2>Scroll To see the effect</h2>
+        <span class="SkewedOne"></span>
+        <span class="SkewedTwo"></span>
+    </section>
+    <section>
+        <h2>Some random sub heading in the page</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum fuga, quas eum rerum ea, hic id possimus explicabo magni at dolore atque laborum, aliquam soluta. Laboriosam praesentium fugit, deserunt porro excepturi exercitationem ipsum, recusandae adipisci error nobis cum dolor. Obcaecati officia vitae perferendis beatae veritatis vero aliquam fugit iusto ipsum tenetur, nihil aperiam harum tempora accusamus, cupiditate dignissimos mollitia? Magni rerum repudiandae amet vitae obcaecati ducimus magnam laborum beatae consequuntur ratione, reiciendis temporibus distinctio, ipsum veritatis recusandae asperiores nesciunt rem laboriosam cumque, provident ullam natus eveniet quisquam. Reiciendis sit corporis, hic, dolorum blanditiis itaque cumque quos, asperiores cum iure reprehenderit!<br><br>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eligendi vel eum reprehenderit impedit explicabo, provident adipisci doloremque dignissimos hic. A fugiat voluptas sequi distinctio soluta unde, odit quaerat tempore officiis eos illum voluptate laudantium asperiores beatae eius iste ipsum similique rem itaque? Accusamus vel libero blanditiis itaque fugiat consectetur. Fuga voluptatum neque quisquam a magni fugit dicta illo. Soluta facilis alias a perspiciatis vitae placeat consectetur architecto. Consequatur eum hic ad at labore. Reiciendis nostrum neque perferendis necessitatibus repellat earum nihil, placeat vitae provident, eos quaerat nam nemo non facere obcaecati sit voluptates esse vel accusamus eveniet quasi asperiores repellendus?
+        </p>
+    </section>
+
+    <script>
+        const SkewedOne = document.querySelector('.SkewedOne');
+        const SkewedTwo = document.querySelector('.SkewedTwo');
+        window.addEventListener('scroll',function(){
+            const value1 = -15 + window.scrollY/45;
+            const value2 = 15 + window.scrollY/-45;
+            SkewedOne.style.transform = "skewY("+ value1 +"deg)"
+            SkewedTwo.style.transform = "skewY("+ value2 +"deg)"
+        })
+    </script>
+</body>
+</html>
